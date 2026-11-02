@@ -13,7 +13,7 @@
 <body>
 <header class="topbar">
   <div class="brand"><img id="logo" src="icon.svg" alt="Logo"><div><strong id="brandName">Miranda</strong><small id="brandSub">Confeitaria Artesanal</small></div></div>
-  <button class="icon" id="settingsBtn" aria-label="Ajustes">⚙️</button>
+  <div class="header-actions"><button class="icon nav-trigger" id="navToggle" aria-label="Abrir menu">✦</button><button class="icon" id="settingsBtn" aria-label="Ajustes">⚙️</button></div>
 </header>
 <main>
   <section class="screen active" id="home"><div class="hero"><span class="eyebrow">MIRANDA / ESTÚDIO DE SABORES</span><h1>Feito à mão.<br><i>Marcante por natureza.</i></h1><p>Organize a produção, encante clientes e dê vida às próximas encomendas.</p><div class="hero-orbs"><span></span><span></span><span></span></div></div><h2 class="section-title">Pulso da produção <span>AO VIVO</span></h2><div class="summary" id="homeSummary"></div><h2 class="section-title">📅 Próximas entregas</h2><div id="upcoming"></div><button class="primary" data-new-order><b>＋</b> Nova encomenda</button></section>
@@ -24,7 +24,7 @@
   <section class="screen" id="clients"><h1>👥 Clientes</h1><input id="clientSearch" type="search" placeholder="🔍 Buscar cliente"><div id="clientList"></div><button class="primary" id="newClient">＋ Novo cliente</button></section>
   <section class="screen" id="easter"><h1>🐣 Especial de Páscoa</h1><article><label>Ano<select id="easterYear"></select></label><p class="countdown" id="countdown"></p></article><div class="summary" id="easterSummary"></div><h2>Galeria de ovos</h2><p class="hint">Os ovos antigos continuam guardados. Marque novidades e oculte os itens fora do cardápio atual.</p><button class="showcase" id="openEasterShowcase">👀 Mostrar catálogo de Páscoa</button><div id="easterList" class="gallery"></div><button class="primary" id="newEasterProduct">＋ Adicionar ovo</button></section>
 </main>
-<nav><button data-view="home" class="selected">🏠<span>Início</span></button><button data-view="orders">📋<span>Pedidos</span></button><button data-view="catalog">🍫<span>Catálogo</span></button><button data-view="pricing">🧮<span>Preço</span></button><button data-view="cash">💰<span>Caixa</span></button><button data-view="clients">👥<span>Clientes</span></button><button data-view="easter">🐣<span>Páscoa</span></button></nav>
+<nav id="navPortal" hidden><div class="portal-title"><span>✦</span><div><b>Portal de Sabores</b><small>Escolha uma área para continuar</small></div></div><button data-view="home" class="selected">🏠<span>Visão geral</span></button><button data-view="orders">📋<span>Encomendas</span></button><button data-view="catalog">🍫<span>Vitrine & catálogo</span></button><button data-view="pricing">🧮<span>Laboratório de preços</span></button><button data-view="cash">💰<span>Fluxo financeiro</span></button><button data-view="clients">👥<span>Relação de clientes</span></button><button data-view="easter">🐣<span>Coleção de Páscoa</span></button></nav>
 <div class="overlay" id="overlay" hidden><div class="modal"><button class="close" id="closeModal">×</button><div id="modalContent"></div></div></div>
 <div class="vitrine" id="vitrine" hidden><header class="topbar"><div class="brand"><img id="vitrineLogo" src="icon.svg" alt=""><div><strong id="vitrineName">Miranda</strong><small id="vitrineSub">Confeitaria Artesanal</small></div></div><button class="icon" id="closeVitrine">×</button></header><h1 id="vitrineTitle"></h1><div id="vitrineItems" class="gallery"></div><p>Encomende pelo WhatsApp 💛</p></div>
 <script src="app.js"></script>

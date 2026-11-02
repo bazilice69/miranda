@@ -46,3 +46,8 @@ function seed(){let future=n=>{let d=new Date;d.setDate(d.getDate()+n);return d.
 load();applyBrand();render('home');if('serviceWorker'in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});
 
 $$('#orderFilters button').forEach(button=>button.onclick=()=>{orderFilter=button.dataset.filter;$$('#orderFilters button').forEach(item=>item.classList.toggle('selected',item===button));render('orders')});
+
+// Portal de Sabores: navegação sob demanda, sem barra inferior de agenda.
+const navPortal=$('#navPortal');
+$('#navToggle').onclick=()=>{navPortal.hidden=!navPortal.hidden};
+$$('#navPortal button').forEach(button=>button.onclick=()=>{screen(button.dataset.view);navPortal.hidden=true});
