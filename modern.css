@@ -1,0 +1,175 @@
+/* Miranda — Modern Atelier UI
+   Camada visual: preserva a identidade rosa, dourado e chocolate sem alterar a lógica do app. */
+:root{
+  --modern-rose:#f08aa1;
+  --modern-rose-soft:#f6b4c2;
+  --modern-gold:#ffd476;
+  --modern-bg:#160b12;
+  --modern-surface:#21111a;
+  --modern-surface-2:#2a1520;
+  --modern-border:#ffffff18;
+  --modern-text:#fff8f7;
+  --modern-muted:#c9aeb7;
+}
+
+html,body{background:var(--modern-bg)!important}
+body{
+  max-width:1180px!important;
+  padding-bottom:104px!important;
+  background:
+    radial-gradient(900px 500px at 10% -10%,#b84d6d24,transparent 65%),
+    radial-gradient(700px 500px at 100% 10%,#ffd47612,transparent 62%),
+    linear-gradient(180deg,#180b13 0%,#12080e 100%)!important;
+  color:var(--modern-text)!important;
+}
+body:before{opacity:.12!important;background-size:44px 44px!important}
+
+.topbar{
+  max-width:1180px;
+  margin:auto;
+  padding:13px 22px!important;
+  background:rgba(24,11,18,.86)!important;
+  border-bottom:1px solid #ffffff12!important;
+  box-shadow:0 8px 35px #00000030;
+}
+.brand{gap:12px!important}
+.brand img{width:42px!important;height:42px!important;border-radius:13px!important;box-shadow:0 5px 20px #0006!important}
+.brand strong{font-family:Inter,ui-sans-serif,system-ui,sans-serif!important;font-size:18px!important;font-weight:750;letter-spacing:-.3px!important}
+.brand small{font-size:8px!important;letter-spacing:1.8px!important;color:var(--modern-rose-soft)!important}
+.icon{width:39px!important;height:39px!important;border-radius:12px!important;background:#ffffff08!important;border-color:#ffffff14!important;color:#f5c6d0!important}
+.icon:hover{background:#f08aa116!important;box-shadow:0 8px 24px #0005!important}
+
+.screen{padding:32px 22px 42px!important;max-width:1120px;margin:auto}
+h1{font-size:32px!important;letter-spacing:-1.3px!important;font-weight:760!important}
+h1 i{font-family:Georgia,serif!important;color:var(--modern-gold)!important}
+h2{font-size:14px!important;font-weight:720!important}
+.section-title{font-size:10px!important;letter-spacing:1.7px!important;color:#cdb5bd!important}
+.section-title span{color:#8de8c4!important;border-color:#8de8c444!important;box-shadow:none!important}
+.hint{color:#bda4ae!important}
+
+.hero{
+  min-height:290px!important;
+  padding:42px 38px!important;
+  border-radius:30px!important;
+  border:1px solid #ffffff1c!important;
+  background:
+    linear-gradient(105deg,#6e2946e8 0%,#3a1727e8 48%,#21121be8 100%)!important;
+  box-shadow:0 28px 70px #00000055,inset 0 1px 0 #ffffff18!important;
+}
+.hero:before{border-color:#ffd47630!important;box-shadow:0 0 70px #ffd47618!important}
+.hero:after{opacity:.55;filter:none!important}
+.eyebrow{font-size:9px!important;letter-spacing:2.4px!important;color:#ffd98b!important}
+.hero h1{font-size:clamp(34px,5vw,52px)!important;line-height:1.03!important;margin-top:18px!important}
+.hero p{max-width:500px!important;font-size:14px!important;color:#f7e8eb!important}
+.hero-orbs span{opacity:.65!important;filter:blur(3px)!important}
+
+article,.card{
+  background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.025))!important;
+  border:1px solid var(--modern-border)!important;
+  border-radius:18px!important;
+  box-shadow:0 12px 35px #00000028,inset 0 1px 0 #ffffff0b!important;
+  backdrop-filter:blur(18px)!important;
+}
+.card:before{width:2px!important;box-shadow:none!important;opacity:.8}
+
+.summary{gap:12px!important}
+.metric{
+  min-height:112px!important;
+  border-radius:18px!important;
+  background:#ffffff05!important;
+  border-color:#ffffff12!important;
+  box-shadow:none!important;
+}
+.metric:after{opacity:.35!important;box-shadow:none!important}
+.metric strong{text-shadow:none!important;font-size:25px!important}
+.metric small{color:#bca5ad!important}
+
+.primary,.showcase{
+  border-radius:13px!important;
+  padding:14px 17px!important;
+  font-weight:750!important;
+  box-shadow:0 8px 24px #0004!important;
+  transition:transform .18s ease,box-shadow .18s ease,filter .18s ease!important;
+}
+.primary{background:linear-gradient(135deg,#b85b78,#e47e99)!important}
+.primary:hover{transform:translateY(-2px)!important;box-shadow:0 12px 30px #0005!important}
+.showcase{background:linear-gradient(135deg,#c99a43,#e5bc65)!important;color:#2c1720!important}
+.secondary{background:#f08aa112!important;border-color:#f08aa14d!important;color:#f5becb!important}
+
+.chips{padding-bottom:15px!important}
+.chips button{background:#ffffff05!important;border-color:#ffffff12!important;color:#bda7af!important;border-radius:12px!important;padding:9px 13px!important}
+.chips button.selected{background:#f08aa11c!important;border-color:#f08aa15c!important;box-shadow:none!important;color:#ffe4e9!important}
+
+.card h3,.product h3{font-weight:720!important}
+.money,.product .price{color:var(--modern-gold)!important;text-shadow:none!important}
+.badge{letter-spacing:.7px!important}
+.actions button{border-radius:9px!important;box-shadow:none!important}
+
+.gallery{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important}
+.product{border-radius:18px!important;background:#ffffff06!important;box-shadow:0 12px 30px #0004!important}
+.product:hover{transform:translateY(-3px)!important;box-shadow:0 18px 38px #0005!important;border-color:#f08aa155!important}
+.product img,.placeholder{background:linear-gradient(135deg,#74334f,#2a1520)!important}
+.product .info{padding:14px!important}
+.product .desc{color:#bba5ae!important}
+.tag{background:#ffd476e8!important;box-shadow:none!important}
+.hidden-tag{background:#10090dcc!important}
+
+input,textarea,select{
+  background:#0f080d99!important;
+  border-color:#ffffff18!important;
+  border-radius:10px!important;
+  padding:12px!important;
+}
+input:focus,textarea:focus,select:focus{box-shadow:0 0 0 3px #f08aa112!important;border-color:#f08aa166!important}
+label{color:#ddc6ce!important}
+.ingredient,.recipe-row{background:#ffffff04!important;border-color:#ffffff0f!important}
+.result{background:linear-gradient(135deg,#f08aa110,#ffd47609)!important}
+
+nav{
+  bottom:16px!important;
+  max-width:920px!important;
+  padding:8px!important;
+  border-radius:18px!important;
+  background:rgba(31,15,24,.91)!important;
+  border:1px solid #ffffff16!important;
+  box-shadow:0 18px 50px #0009!important;
+}
+nav button{border-radius:11px!important;color:#a99099!important}
+nav button:hover{background:#ffffff06!important}
+nav button.selected{background:#f08aa112!important;color:#ffd9a0!important;text-shadow:none!important}
+nav button span{font-size:8px!important}
+
+#navPortal[hidden]{display:none}
+#navPortal:not([hidden]){display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:14px}
+.portal-title{grid-column:1/-1;display:flex;gap:10px;align-items:center;padding:8px 8px 12px;border-bottom:1px solid #ffffff0d;margin-bottom:2px}
+.portal-title>span{color:var(--modern-gold);font-size:18px}
+.portal-title b{display:block;font-size:13px;color:#fff}
+.portal-title small{display:block;color:#9f858e;font-size:9px;margin-top:3px}
+
+.overlay{background:#080407dd!important;backdrop-filter:blur(14px)!important}
+.modal{
+  background:linear-gradient(150deg,#2a1420,#170b12)!important;
+  border-color:#ffffff18!important;
+  border-radius:24px 24px 0 0!important;
+  box-shadow:0 -25px 80px #000b!important;
+}
+.close{box-shadow:none!important}
+
+.vitrine{background:linear-gradient(180deg,#180b13,#10070c)!important}
+.vitrine .topbar{background:#180b13e8!important}
+.vitrine h1{margin-top:28px!important}
+
+@media(min-width:720px){
+  .summary{grid-template-columns:repeat(4,1fr)!important}
+  .gallery{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+  .grid{gap:0 16px!important}
+}
+@media(max-width:600px){
+  .screen{padding:24px 15px 36px!important}
+  .topbar{padding:12px 15px!important}
+  .hero{padding:29px 23px!important;min-height:255px!important}
+  .hero h1{font-size:34px!important}
+  .gallery{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+  #navPortal:not([hidden]){grid-template-columns:repeat(2,1fr)}
+  nav{left:8px!important;right:8px!important}
+}
