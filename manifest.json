@@ -1,0 +1,11 @@
+{
+  "name": "Miranda Confeitaria Artesanal",
+  "short_name": "Miranda",
+  "description": "Encomendas, catálogo, custos e financeiro da Miranda Confeitaria Artesanal.",
+  "start_url": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fdf6f0",
+  "theme_color": "#b76e79",
+  "icons": [{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}

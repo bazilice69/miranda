@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#b76e79">
+  <title>Miranda Confeitaria Artesanal</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><img id="logo" src="icon.svg" alt="Logo"><div><strong id="brandName">Miranda</strong><small id="brandSub">Confeitaria Artesanal</small></div></div>
+  <button class="icon" id="settingsBtn" aria-label="Ajustes">⚙️</button>
+</header>
+<main>
+  <section class="screen active" id="home"><h1>🏠 Início</h1><div class="summary" id="homeSummary"></div><h2>📅 Próximas entregas</h2><div id="upcoming"></div><button class="primary" data-new-order>＋ Nova encomenda</button></section>
+  <section class="screen" id="orders"><h1>📋 Encomendas</h1><div class="chips" id="orderFilters"><button class="selected" data-filter="all">Todas</button><button data-filter="recebido">Recebidas</button><button data-filter="fazendo">Fazendo</button><button data-filter="pronto">Prontas</button><button data-filter="entregue">Entregues</button></div><div id="orderList"></div><button class="primary" data-new-order>＋ Nova encomenda</button></section>
+  <section class="screen" id="catalog"><h1>🍫 Catálogo</h1><p class="hint">Fotos, descrição e preços dos itens que a Miranda faz.</p><div class="chips" id="catalogFilters"></div><button class="showcase" id="openShowcase">👀 Mostrar ao cliente</button><div id="catalogList" class="gallery"></div><button class="primary" id="newProduct">＋ Adicionar item</button></section>
+  <section class="screen" id="pricing"><h1>🧮 Calculadora de preço</h1><article><h2>1. Insumos</h2><p class="hint">Cadastre o preço de compra e o rendimento da embalagem.</p><div id="ingredientList"></div><button class="secondary" id="newIngredient">＋ Insumo</button></article><article><h2>2. Receita</h2><label>Nome do produto<input id="recipeName" placeholder="Ex.: pão de queijo (30 un.)"></label><div id="recipeRows"></div><button class="secondary" id="addRecipeItem">＋ Ingrediente da receita</button><div class="grid"><label>Rendimento<input id="yield" type="number" min="1" value="30"></label><label>Mão de obra total (R$)<input id="labor" type="number" min="0" step=".01" value="0"></label><label>Outros gastos (R$)<input id="other" type="number" min="0" step=".01" value="0"></label><label>Margem de lucro (%)<input id="margin" type="number" min="0" value="100"></label></div></article><article class="result" id="pricingResult"></article><button class="primary" id="saveCalculated">💾 Salvar no catálogo</button></section>
+  <section class="screen" id="cash"><h1>💰 Financeiro</h1><div class="month"><button class="icon" id="previousMonth">◀</button><strong id="monthTitle"></strong><button class="icon" id="nextMonth">▶</button></div><div class="summary" id="cashSummary"></div><h2>Gastos e despesas</h2><div id="expenseList"></div><button class="primary" id="newExpense">＋ Lançar gasto</button><p class="hint">Vendas pagas ou entregues entram automaticamente no resumo.</p></section>
+  <section class="screen" id="clients"><h1>👥 Clientes</h1><input id="clientSearch" type="search" placeholder="🔍 Buscar cliente"><div id="clientList"></div><button class="primary" id="newClient">＋ Novo cliente</button></section>
+  <section class="screen" id="easter"><h1>🐣 Especial de Páscoa</h1><article><label>Ano<select id="easterYear"></select></label><p class="countdown" id="countdown"></p></article><div class="summary" id="easterSummary"></div><h2>Galeria de ovos</h2><p class="hint">Os ovos antigos continuam guardados. Marque novidades e oculte os itens fora do cardápio atual.</p><button class="showcase" id="openEasterShowcase">👀 Mostrar catálogo de Páscoa</button><div id="easterList" class="gallery"></div><button class="primary" id="newEasterProduct">＋ Adicionar ovo</button></section>
+</main>
+<nav><button data-view="home" class="selected">🏠<span>Início</span></button><button data-view="orders">📋<span>Pedidos</span></button><button data-view="catalog">🍫<span>Catálogo</span></button><button data-view="pricing">🧮<span>Preço</span></button><button data-view="cash">💰<span>Caixa</span></button><button data-view="clients">👥<span>Clientes</span></button><button data-view="easter">🐣<span>Páscoa</span></button></nav>
+<div class="overlay" id="overlay" hidden><div class="modal"><button class="close" id="closeModal">×</button><div id="modalContent"></div></div></div>
+<div class="vitrine" id="vitrine" hidden><header class="topbar"><div class="brand"><img id="vitrineLogo" src="icon.svg" alt=""><div><strong id="vitrineName">Miranda</strong><small id="vitrineSub">Confeitaria Artesanal</small></div></div><button class="icon" id="closeVitrine">×</button></header><h1 id="vitrineTitle"></h1><div id="vitrineItems" class="gallery"></div><p>Encomende pelo WhatsApp 💛</p></div>
+<script src="app.js"></script>
+</body>
+</html>
